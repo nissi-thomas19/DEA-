@@ -1,21 +1,41 @@
-# 🗑️ Smart Garbage Bin Monitoring System
-### IoT + Machine Learning + Reinforcement Learning | Smart City Waste Management
+Smart Garbage Bin Monitoring System (IoT + ML + RL)
+Overview
 
----
+This project presents a Smart Garbage Bin Monitoring System designed to simulate real-world IoT-based waste management. It generates sensor data from 100 smart bins and uses Machine Learning and Reinforcement Learning techniques to monitor waste levels in real time and optimize garbage collection schedules.
 
-## 📌 Overview
+The system is integrated into an interactive Streamlit dashboard, making it suitable for smart city applications where efficiency and automation are essential.
 
-This project presents a **Smart Garbage Bin Monitoring System** that integrates **IoT sensor simulation**, **Machine Learning**, and **Reinforcement Learning** to enable intelligent, real-time waste monitoring and adaptive collection optimization across a smart city environment.
+Key Features:
+Simulates IoT sensor data for 100 garbage bins with over 50,000 records
+Performs Exploratory Data Analysis (EDA) to understand fill-level patterns
+Visualizes historical trends of bin usage
+Classifies bin status (Empty, Half-Filled, Full) using a Random Forest model
+Detects anomalies (e.g., faulty sensors) using Isolation Forest
+Uses Q-Learning (Reinforcement Learning) for adaptive waste collection scheduling
+Implements a rule-based alert system for warning and critical fill levels
+Supports both single-bin and multi-bin simulation scenarios
+Provides an interactive real-time dashboard using Streamlit and Plotly
 
-A **Streamlit-based interactive dashboard** provides live bin status, ML predictions, anomaly alerts, and multi-bin RL simulation.
+Technologies Used:
+Python
+Pandas & NumPy
+Matplotlib & Seaborn
+Scikit-learn
+XGBoost
+Streamlit
+Plotly
+Joblib
 
----
+Future Enhancements:
+Integration with real-time IoT sensors using MQTT protocol
+Route optimization using Vehicle Routing Problem (VRP) algorithms
+Implementation of Deep Q-Networks (DQN) for advanced reinforcement learning
+Fill-level forecasting using LSTM models
+Development of a mobile application for field operators
+Cloud deployment with a scalable database backend
 
-## 🧠 Key Features
-
-- 📊 **Real-time Bin Monitoring** — Fill level, temperature, and humidity tracking
-- 🤖 **ML Status Prediction** — Random Forest Classifier (Empty / Half-Filled / Full)
-- 🚨 **Anomaly Detection** — Isolation Forest for sensor fault detection
-- 🎮 **RL-Based Collection Scheduling** — Q-Learning agent for adaptive decisions
-- 🏙️ **Multi-Bin Smart City Simulation** — Parallel RL decisions across 5 city bins
-- 📈 **Interactive Dashboard** — Built with Streamlit + Plotly
+How to Run the Project:
+Generate the dataset: python generate_dataset.py
+Train the machine learning models: python train_model.py
+Train the reinforcement learning agent: python rl_model.py
+Launch the dashboard: streamlit run app.py
